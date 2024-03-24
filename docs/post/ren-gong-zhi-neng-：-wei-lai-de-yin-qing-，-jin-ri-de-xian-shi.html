@@ -12,8 +12,9 @@
         else if(localStorage.getItem("meek_theme")=="light"){document.getElementsByTagName("html")[0].attributes.getNamedItem("data-color-mode").value="light";}
     </script>
     
-<meta name="description" content="AI探索与发现">
-<title>Blog AI</title>
+<meta name="description" content="人工智能：未来的引擎，今日的现实">
+<title>人工智能：未来的引擎，今日的现实</title>
+
 
 </head>
 <style>
@@ -24,81 +25,81 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </style>
 
 <style>
-.avatar {transition: 0.8s;width:64px;height:64px;object-fit: cover;}
-.avatar:hover{transform: scale(1.15) rotate(360deg);}
-#header h1 a{color:inherit;text-decoration:none;vertical-align: bottom;font-size:40px;font-family:Monaco;margin-left:8px;}
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
 .title-right{display:flex;margin:auto 0 0 auto;}
-.title-right button{margin-right:8px;padding:16px;}
-.title-right .circle{padding: 14px 16px;}
-
-.SideNav{min-width: 360px;}
-.SideNav-icon{margin-right: 16px}
-.SideNav-item .Label{color: #fff;margin-left:8px;}
-.d-flex{min-width:0;}
-.listTitle{overflow:hidden;white-space:nowrap;text-overflow: ellipsis;max-width: 100%;}
-.listLabels{white-space:nowrap;}
-.listLabels object{max-height:16px;max-width:24px;}
-
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
 @media (max-width: 600px) {
     body {padding: 8px;}
-    .avatar {width:40px;height:40px;}
-    .blogTitle{display:none;}
-    #buttonRSS{display:none;}
-    .LabelTime{display:none;}
+    .postTitle{font-size:24px;}
 }
 </style>
 
 
+
+
 <body>
     <div id="header">
-<h1>
-    <img src="https://github.githubassets.com/favicons/favicon.svg" class="avatar circle" id="avatarImg" alt="avatar"><a class="blogTitle">Blog AI</a></h1>
+<h1 class="postTitle">人工智能：未来的引擎，今日的现实</h1>
 <div class="title-right">
-    <a href="https://zyhongkong.github.io/AI/tag.html"><button id="buttonSearch" class="btn btn-invisible circle" title="搜索">
-        <svg class="octicon" width="16" height="16" >
-            <path id="pathSearch" fill-rule="evenodd"></path>
+    
+    <a href="https://zyhongkong.github.io/AI"><button id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd" d="M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z"></path>
+        </svg>
+    </button></a>
+
+    
+    <a href="https://github.com/zyhongkong/AI/issues/1" target="_blank"><button class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd" d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path>
         </svg>
     </button></a>
     
-    <a href="https://zyhongkong.github.io/AI/rss.xml" target="_blank"><button id="buttonRSS" class="btn btn-invisible circle" title="RSS">
-        <svg class="octicon" width="16" height="16" >
-            <path id="pathRSS" fill-rule="evenodd"></path>
-        </svg>
-    </button></a>
-    <button class="btn btn-invisible circle" onclick="modeSwitch()" title="切换主题">
+
+    <button class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
         <svg class="octicon" width="16" height="16" >
             <path id="themeSwitch" fill-rule="evenodd"></path>
         </svg>
     </button>
+
 </div>
 </div>
     <div id="content">
-<div style="margin-bottom: 16px;">AI探索与发现</div>
-<nav class="SideNav border">
-<a class="SideNav-item d-flex flex-items-center flex-justify-between" href="post/GitHub-shang-fork%20-shuo-ming.html">
-    <div class="d-flex flex-items-center">
-        <svg class="SideNav-icon octicon" style="witdh:16px;height:16px"><path class="svgTop0" d=""></path>
-        </svg>
-        <span class="listTitle">GitHub上fork 说明</span>
-    </div>
-    <div class="listLabels">
-        
-        <span class="Label LabelName" style="background-color:#0075ca"><object><a style="color:#fff" href="https://zyhongkong.github.io/AI/tag.html#documentation">documentation</a></object></span>
-        <span class="Label LabelTime" style="background-color:#bc4c00">2024-03-24</span>
-    </div>
-</a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="post/ren-gong-zhi-neng-%EF%BC%9A-wei-lai-de-yin-qing-%EF%BC%8C-jin-ri-de-xian-shi.html">
-    <div class="d-flex flex-items-center">
-        <svg class="SideNav-icon octicon" style="witdh:16px;height:16px"><path class="svgTop0" d=""></path>
-        </svg>
-        <span class="listTitle">人工智能：未来的引擎，今日的现实</span>
-    </div>
-    <div class="listLabels">
-        
-        <span class="Label LabelName" style="background-color:#0075ca"><object><a style="color:#fff" href="https://zyhongkong.github.io/AI/tag.html#documentation">documentation</a></object></span>
-        <span class="Label LabelTime" style="background-color:#bc4c00">2024-03-24</span>
-    </div>
-</a>
-</nav>
+<div class="markdown-body" id="postBody"><p>人工智能（AI）已经成为我们这个时代最具变革性的技术之一。从自动驾驶汽车到智能个人助理，AI的应用正在渗透到我们生活的方方面面。在这篇博客文章中，我们将探讨AI的基本概念、发展历程、当前应用以及未来的发展趋势。</p>
+<h2>人工智能的基本概念</h2>
+<p>人工智能是计算机科学的一个分支，它试图理解智能的本质并制造出一种新的能以人类智能方式做出反应的智能机器。AI可以分为两个主要类别：<strong>弱人工智能</strong>和<strong>强人工智能</strong>。</p>
+<ul>
+<li><strong>弱人工智能</strong>（Narrow AI）：设计用于执行特定任务的智能系统，如语音识别、图像识别、推荐系统等。</li>
+<li><strong>强人工智能</strong>（General AI）：具有广泛的认知能力，能够在多种任务和环境中表现出与人类相似的智能水平。</li>
+</ul>
+<h2>人工智能的发展历程</h2>
+<p>AI的概念最早可以追溯到古希腊神话中的自动机概念，但作为一个科学领域，它的起源通常被认为是在20世纪50年代。自那时以来，AI经历了几次“寒冬”和“复兴”，每一次复兴都伴随着技术的进步和新算法的发现。</p>
+<h2>当前人工智能的应用</h2>
+<p>AI技术已经广泛应用于各个行业，包括但不限于：</p>
+<ul>
+<li><strong>医疗保健</strong>：AI在疾病诊断、个性化治疗计划和药物研发中发挥着重要作用。</li>
+<li><strong>金融服务</strong>：银行和金融机构使用AI进行风险管理、欺诈检测和自动化交易。</li>
+<li><strong>交通运输</strong>：自动驾驶汽车和无人机正在改变我们的出行方式。</li>
+<li><strong>零售业</strong>：AI驱动的推荐系统和个性化购物体验正在重塑零售业。</li>
+<li><strong>教育</strong>：个性化学习平台和智能教育助手正在改变传统的教学模式。</li>
+</ul>
+<h2>人工智能的未来趋势</h2>
+<p>随着技术的不断进步，AI的未来充满了无限可能。以下是一些可能的发展趋势：</p>
+<ul>
+<li><strong>更深层次的学习</strong>：深度学习将继续推动AI的发展，使机器能够处理更复杂的任务。</li>
+<li><strong>人机协作</strong>：AI将与人类更紧密地协作，提高工作效率和创造力。</li>
+<li><strong>伦理和隐私</strong>：随着AI的深入应用，对其伦理和隐私问题的讨论将变得更加重要。</li>
+<li><strong>AI民主化</strong>：AI工具和平台将变得更加易于访问，使得更多的人能够利用这项技术。</li>
+</ul>
+<p>人工智能正在以前所未有的速度发展，它正在改变我们的工作和生活方式。虽然它带来了许多挑战，如就业变革、隐私保护和伦理问题，但它也为解决一些最棘手的全球问题提供了新的工具和方法。随着我们进入AI时代，重要的是我们要理解这项技术，并为其负责任和可持续的发展做出贡献。</p></div>
+<div style="font-size:small;margin-top:8px;float:right;"></div>
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
 </div>
     <div id="footer">Copyright © <span id="year"></span><a href="https://zyhongkong.github.io/AI"> Blog AI </a>
 <p>
@@ -151,19 +152,45 @@ console.log("\n %c Gmeek last %c https://github.com/Meekdai/Gmeek \n\n", "color:
 </script>
 
 <script>
-document.getElementById("pathSearch").setAttribute("d",IconList["search"]);
-document.getElementById("pathRSS").setAttribute("d",IconList["rss"]);
-iconTOP=document.getElementsByClassName("svgTop1");
-iconPost=document.getElementsByClassName("svgTop0");
-for(var i=0;i<iconTOP.length;i++){
-    iconTOP[i].setAttribute("d",IconList["upload"]);
-    iconTOP[i].parentNode.style.color="red";
-}
-for(var i=0;i<iconPost.length;i++){
-    iconPost[i].setAttribute("d",IconList["post"]);
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","zyhongkong/AI");
+    script.setAttribute("issue-term","title");
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else{script.setAttribute("theme","github-light");}
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
 }
 
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
 
 </script>
+
+
+
 
 </html>
